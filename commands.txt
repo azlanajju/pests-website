@@ -1,1 +1,4 @@
 git add . && git commit -m "updating the website" && git push
+
+git fetch && git merge
+
