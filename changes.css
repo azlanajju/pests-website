@@ -1,3 +1,73 @@
 .icon{
     color: #aa1712;
 }
+
+
+
+.ceo-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .ceo-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .ceo-info {
+    text-align: center;
+  }
+  
+  .ceo-info h6 {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  
+  .ceo-info h1 {
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .ceo-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .ceo-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  
+  
+  .icon {
+    font-size: 28px;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa;
+  }
+  
+  .form-control {
+    border-radius: 0;
+  }
+  
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+      
