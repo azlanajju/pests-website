@@ -156,7 +156,8 @@
 .page-header .container {
     position: relative;
     padding: 45px 0 45px 35px;
-    border-left: 15px solid #FFFFFF;
+    border-left: 15px solid #fff;
+
 }
 
 .header-carousel .container::before,
@@ -169,7 +170,7 @@
     left: 0;
     width: 100px;
     height: 15px;
-    background: #FFFFFF;
+    background: #fff;
 }
 
 .header-carousel .container::after,
@@ -193,15 +194,30 @@
 
     .header-carousel .owl-carousel-item h5,
     .header-carousel .owl-carousel-item p {
-        font-size: 14px !important;
+        font-size: 12px !important;
         font-weight: 400 !important;
     }
+    .header-carousel .owl-carousel-item h1{
+        font-size: 20px !important;
+    }
+
 
     .header-carousel .owl-carousel-item h1 {
         font-size: 30px;
         font-weight: 600;
     }
+
 }
+.header-carousel .owl-carousel-item h5{
+    border: 2px solid #fff;
+    display: inline-block;
+    padding:8px  10px ;
+    border-radius:8px;
+}
+.active_caro{
+    background: #aa1712;
+}
+
 
 .header-carousel .owl-nav {
     position: absolute;
