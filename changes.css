@@ -43,7 +43,6 @@
   }
 
   
-  
   .icon {
     font-size: 28px;
   }
@@ -70,4 +69,12 @@
     background-color: #0069d9;
     border-color: #0062cc;
   }
-      
+  
+  @media (max-width: 768px) {
+    .col-md-4,
+    .col-md-6 {
+      margin-bottom: 15px;
+    }
+  }
+  
+  

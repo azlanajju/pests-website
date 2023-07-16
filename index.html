@@ -474,32 +474,59 @@
  <div class="container-fluid my-5 px-0">
     <div class="container position-relative wow fadeInUp" data-wow-delay="0.1s">
       <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-10">
           <div class="bg-light text-center p-5">
             <h1 class="mb-4 icon">Book a Service</h1>
             <form>
               <div class="row g-3">
-                <div class="col-12 col-sm-6">
-                  <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                <div class="col-lg-6">
+                  <input type="text" class="form-control border-0" placeholder="Full Name" style="height: 55px;">
                 </div>
-                <div class="col-12 col-sm-6">
-                  <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                <div class="col-lg-6">
+                  <input type="email" class="form-control border-0" placeholder="Email" style="height: 55px;">
                 </div>
-                <div class="col-12 col-sm-6">
-                  <select class="form-select border-0" style="height: 55px;">
+                <div class="col-12">
+                  <input type="text" class="form-control border-0" placeholder="Address" style="height: 55px;">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" class="form-control border-0" placeholder="City" style="height: 55px;">
+                </div>
+                <div class="col-md-4">
+                  <input type="text" class="form-control border-0" placeholder="Zip Code" style="height: 55px;">
+                </div>
+                <div class="col-md-4">
+                  <select id="hear-about-us" class="form-select border-0" style="height: 55px;">
                     <option selected>Select a Service</option>
-                    <option value="1">Service 1</option>
-                    <option value="2">Service 2</option>
-                    <option value="3">Service 3</option>
+                    <option value="termite1">Termite 1</option>
+                    <option value="termite2">Termite 2</option>
+                    <option value="termite3">Termite 3</option>
+                    <option value="termite4">Termite 4</option>
+                    <option value="termite5">Termite 5</option>
                   </select>
                 </div>
-                <div class="col-12 col-sm-6">
-                  <div class="date" id="date1" data-target-input="nearest">
-                    <input type="text" class="form-control border-0 datetimepicker-input" placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
+                <div class="col-md-6">
+                  <div class="date" id="booking-date" data-target-input="nearest">
+                    <input type="text" class="form-control border-0 datetimepicker-input" placeholder="Select a Date" data-target="#booking-date" data-toggle="datetimepicker" style="height: 55px;">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="whatsapp" id="whatsapp-yes" value="yes">
+                    <label class="form-check-label" for="whatsapp-yes">I have WhatsApp</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="whatsapp" id="whatsapp-no" value="no">
+                    <label class="form-check-label" for="whatsapp-no">I don't have WhatsApp</label>
                   </div>
                 </div>
                 <div class="col-12">
-                  <textarea class="form-control border-0" placeholder="Special Request"></textarea>
+                  <textarea class="form-control border-0" placeholder="Message"></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="agreement-check">
+                    <label class="form-check-label" for="agreement-check">I agree to the terms and conditions</label>
+                  </div>
                 </div>
                 <div class="col-12">
                   <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
@@ -511,6 +538,7 @@
       </div>
     </div>
   </div>
+  
   
 <!-- Booking End -->
 
