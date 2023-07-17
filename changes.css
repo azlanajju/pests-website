@@ -134,3 +134,90 @@
     font-size: 18px;
     z-index: 1;
   }
+
+
+
+
+
+
+  /* get a quote */
+
+
+  .quote-box {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quote-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .quote-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quote-box .inline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .quote-box .left-section,
+  .quote-box .right-section {
+    flex-grow: 1;
+  }
+  
+  .quote-box .center-section {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .quote-box .label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .quote-box input[type="email"] {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quote-box button.quote-button,
+  .quote-box a.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff3b3f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quote-box button.quote-button:hover,
+  .quote-box a.whatsapp-button:hover {
+    background-color: #ff0000;
+  }
+  
+  .quote-box a.whatsapp-button i {
+    margin-right: 5px;
+  }
+  
