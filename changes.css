@@ -145,79 +145,112 @@
 
   .quote-box {
     background-color: #f5f5f5;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   .quote-box h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 20px;
   }
   
-  .quote-box form {
+  .quote-input-group {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
   }
   
-  .quote-box .inline-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
+  .quote-input-group label {
+    font-size: 18px;
+    margin-bottom: 10px;
   }
   
-  .quote-box .left-section,
-  .quote-box .right-section {
-    flex-grow: 1;
-  }
-  
-  .quote-box .center-section {
-    flex-grow: 2;
+  .input-button-group {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   
-  .quote-box .label {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .quote-box input[type="email"] {
+  .input-button-group input[type="email"] {
     width: 300px;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-right: 10px;
     border: none;
     border-radius: 5px;
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  .quote-box button.quote-button,
-  .quote-box a.whatsapp-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  .input-button-group button.quote-button {
     background-color: #ff3b3f;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px 20px;
+    font-size: 18px;
     cursor: pointer;
-    text-decoration: none;
-    margin-bottom: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
   }
   
-  .quote-box button.quote-button:hover,
-  .quote-box a.whatsapp-button:hover {
+  .input-button-group button.quote-button:hover {
     background-color: #ff0000;
   }
   
-  .quote-box a.whatsapp-button i {
-    margin-right: 5px;
+  .whatsapp-section {
+    margin-top: 20px;
   }
   
+  .whatsapp-section .whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .whatsapp-section .whatsapp-button i {
+    margin-right: 10px;
+  }
+
+
+
+  /* <!-- green display --> */
+
+
+  .cardd-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ccardd {
+    width: auto;
+    height: auto;
+    background-color: #f2f2f2;
+    margin-right: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .ccardd:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+  }
+
+  @media (max-width: 600px) {
+    .cardd-container {
+      flex-wrap: wrap;
+    }
+
+    .ccardd {
+      margin-bottom: 10px;
+    }
+  }
