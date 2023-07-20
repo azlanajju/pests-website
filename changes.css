@@ -76,6 +76,9 @@
       margin-bottom: 15px;
     }
   }
+
+
+  /* seriveces card */
   
   
   .card-container {
@@ -221,44 +224,35 @@
   }
 
  */
- .container {
+
+ .quote-box {
   position: fixed;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.quote-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 400px;
+  align-items: center;
+  width: 80vw;
+  height: 250px; /* Increased height to accommodate the larger input box */
   background-color: #f1f1f1;
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.quote-header {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .quote-form {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  margin-bottom: 20px;
+  flex-direction: column; /* To center the input and button vertically */
+}
+
+.inputquote {
+  margin-bottom: 10px;
 }
 
 .quote-form input {
-  width: 100%;
-  max-width: 300px;
-  padding: 12px;
+  padding: px; /* Increased padding for a bigger input box */
   border-radius: 5px;
   border: none;
   outline: none;
@@ -266,14 +260,12 @@
 }
 
 .get-quote-btn {
-  width: 100%;
-  max-width: 300px;
   background-color: #aa1712;
   color: #fff;
-  padding: 12px;
+  padding: 12px 25px; /* Adjusted padding for a bigger button */
   border: none;
   border-radius: 5px;
-  margin-top: 10px;
+  margin-left: 5px;
   cursor: pointer;
   font-size: 16px;
 }
@@ -282,19 +274,12 @@
   background-color: #850f0c;
 }
 
-.whatsapp-contact {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-
 .whatsapp-contact img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
 
 
   /* <!-- green display --> */
@@ -329,3 +314,29 @@
       margin-bottom: 10px;
     }
   }
+
+
+
+  /* services card  */
+
+  /* Add this style to the parent container of the images */
+.container {
+  position: relative;
+}
+
+/* Add this style to the red transparent screen */
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.5); /* Red color with 50% transparency */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Add this style to show the red transparent screen when hovering over the images */
+.service-item-top:hover .img-overlay {
+  opacity: 1;
+}
