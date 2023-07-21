@@ -155,22 +155,32 @@
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+
 }
 
+
 .card-logo {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    opacity: 0;
-    pointer-events: none;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px; /* Adjust the width as needed */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
 }
+
+.card-logo i {
+  margin-bottom: 60%;
+  font-size: 100px; /* Adjust the font-size as needed */
+  color: white;
+}
+
+
 
 .card:hover .card-logo {
     opacity: 1;
@@ -240,6 +250,7 @@
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 
   /* <!-- green display --> */
