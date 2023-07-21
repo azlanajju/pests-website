@@ -194,21 +194,31 @@
 
 /* get a quote */
 
-
- .quote-box {
-  position: fixed;
+.esitmate{
   display: flex;
+}
+.esitmate img{
+height: 100px;
+border-right: 2px solid grey;
+padding: 10px;
+}
+.est_details {
+  padding: 10px;
+}
+ .quote-box {
+  z-index: 999;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 80vw;
-  height: 250px; /* Increased height to accommodate the larger input box */
-  background-color: #f1f1f1;
-  border-radius: 20px;
+  background-color: #EDF1FC;
+  border-radius: 20px 20px 0 0 ;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+margin: auto;
+margin-top: -250px;
 }
 
 .quote-form {
@@ -220,9 +230,16 @@
 .inputquote {
   margin-bottom: 10px;
 }
+.cancel_btn{
+position: absolute;
+right: 10px;
+top: 0px;
+font-size: 30px;
+cursor: pointer;
+}
 
 .quote-form input {
-  padding: px; /* Increased padding for a bigger input box */
+  padding: 10px 20px; /* Increased padding for a bigger input box */
   border-radius: 5px;
   border: none;
   outline: none;
@@ -296,19 +313,26 @@
     position: relative;
     max-width: 100%;
 }
+.mission::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right,white,rgba(255, 255, 255, 0.616), rgba(255, 255, 255, 0));
+  z-index: 1;
+}
 
 .mission-img-container {
     position: relative;
-    width: 88vw;
-    max-width: 1270px; /* Set the maximum width of the image container */
     margin: 0 auto; /* Center the container horizontally */
 }
 
 .mission-img {
-    width: 100%;
-    height: auto;
+    width: 100vw;
+height: 100%;
+object-fit: cover;
     display: block;
-    border-radius: 8px; /* Optional: To add rounded corners to the image */
+    border-radius: 8px; 
 }
 
 .mission-content {
@@ -318,14 +342,21 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    z-index: 1;
+    margin-top: -100px;
 }
 
 .mission-title {
     font-size: 44px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: red;
+    color: 7a6d6d;
+    
 }
+.added_book{
+  margin-top: -80px;
+}
+
 
 .content-box {
     background-color: rgba(255, 255, 255, 0.8); /* Set the background color for the box */
@@ -356,7 +387,73 @@
 }
 
 .core-values-btn:hover {
-  background-color:red; /* Change the background color on hover */
-  color: #fff; /* Change the text color on hover */
+  background-color:7a6d6d;
+  color: #fff; 
 }
 
+
+
+@media (max-width:786px) {
+.esitmate img{
+  height: 50px;
+
+}
+.quote-box{
+  margin-top: 0;
+}
+.est_details h1{
+  font-size: 16px;
+}
+.est_details p{
+  display: none;
+}
+.mission-img{
+  display: none;
+}
+
+.mission-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0);
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+.mission-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Set the background color for the box */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.mission-paragraph {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: black;
+}
+.cardd-container{
+  text-align: center;
+}
+.ccardd img{
+  width: 90vw;
+
+}
+.about_logo{
+  width:90vw;
+}
+.about_title{
+  font-size: 25px;
+}
+.hide_in_phone{
+  display: none;
+}
+}
