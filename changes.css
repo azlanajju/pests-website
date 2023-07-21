@@ -277,6 +277,75 @@
 
 
 
-  /* services card  */
 
+
+
+  /* mission images */
+  .mission {
+    position: relative;
+    max-width: 100%;
+}
+
+.mission-img-container {
+    position: relative;
+    width: 88vw;
+    max-width: 1270px; /* Set the maximum width of the image container */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.mission-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Optional: To add rounded corners to the image */
+}
+
+.mission-content {
+    position: absolute;
+    top: 55%;
+    left: 34%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.mission-title {
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.content-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Set the background color for the box */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.mission-paragraph {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.core-values-btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+  margin: 10px auto; /* Center the button horizontally */
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s; /* Add a transition effect for smooth animation */
+
+}
+
+.core-values-btn:hover {
+  background-color:red; /* Change the background color on hover */
+  color: #fff; /* Change the text color on hover */
+}
 
