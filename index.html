@@ -96,29 +96,33 @@
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-10 col-lg-8">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown active_caro ">Residential</h5>
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown caro_lilSmall">Rodent</h5>
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown caro_lilSmall">Termite</h5>
+                            <a href="#" class="btn btn-lg btn-danger text-uppercase mb-3 animated slideInDown active_caro" style="border: 2px solid white;" data-content="residential">Residential</a>
+                            <a href="#" class="btn btn-sm btn-danger text-uppercase mb-3 animated slideInDown caro_lilSmall" style="border: 2px solid white;" data-content="rodent">Rodent</a>
+                            <a href="#" class="btn btn-sm btn-danger text-uppercase mb-3 animated slideInDown caro_lilSmall" style="border: 2px solid white;" data-content="termite">Termite</a>
                             <br>
                             <br>
 
-                            <h1 style="font-size: 30px;"  class="display-3 text-white animated slideInDown mb-4">For Fast, Effective Pest Control <br> In Dallas Fort Worth & Houston</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2">"For ongoing protection against common household pests, All-Safe Pest & Termite is the trusted choice for pest management! We have green and eco-friendly options available!"</p>
+                            <h1 id="contentTitle" style="font-size: 30px;" class="display-3 text-white animated slideInDown mb-4">For Fast, Effective Pest Control <br> In Dallas Fort Worth & Houston</h1>
+                            <p id="contentText" class="fs-5 fw-medium text-white mb-4 pb-2">"For ongoing protection against common household pests, All-Safe Pest & Termite is the trusted choice for pest management! We have green and eco-friendly options available!"</p>
                             <div class="price-container text-center">
                                 <br>
-                                
                                 <br>
                                 <p class="price-text text-white" style="font-size: 30px;">Plans starting as low as</p>
-                                <p class="price-amount text-white display-4 mb-0"  style="font-size: 30px !important;"> $34<span class="price-decimal">.</span><span class="price-cents" style="font-size: 20px;">99</span>
-                                    <span class="price-month"  style="font-size: 30px;">/mon</span>
+                                <p class="price-amount text-white display-4 mb-0" style="font-size: 30px !important;"> $34<span class="price-decimal">.</span><span class="price-cents" style="font-size: 20px;">99</span>
+                                    <span class="price-month" style="font-size: 30px;">/mon</span>
                                 </p>
-                                <a href="" style="background: #aa1712; border-radius: 10px; border: 2px solid white;" class="btn btn-primary py-md-3 px-md-5 animated slideInLeft">Book Now</a>
+                                <a href="#" class="btn btn-primary py-md-3 px-md-5 animated slideInLeft" style="background: #aa1712; border-radius: 10px; border: 2px solid white;">Book Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<!-- Carousel End -->
+
+<!-- Carousel End -->
         <!-- <div class="owl-carousel-item position-relative">
             <img class="img-fluid" src="./images/dskt2.jpg" alt="">
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
@@ -167,10 +171,6 @@
                 </div>
             </div>
         </div> -->
-    </div>
-</div>
-<!-- Carousel End -->
-
 
 <!-- add email -->
 
@@ -684,6 +684,29 @@
             }
         });
     });
+
+    const contentTitle = document.getElementById('contentTitle');
+    const contentText = document.getElementById('contentText');
+
+    const residentialBtn = document.querySelector('.btn[data-content="residential"]');
+    const rodentBtn = document.querySelector('.btn[data-content="rodent"]');
+    const termiteBtn = document.querySelector('.btn[data-content="termite"]');
+
+    residentialBtn.addEventListener('click', function () {
+        contentTitle.innerText = 'Residential Title';
+        contentText.innerText = 'Residential Content Text';
+    });
+
+    rodentBtn.addEventListener('click', function () {
+        contentTitle.innerText = 'Rodent Title';
+        contentText.innerText = 'Rodent Content Text';
+    });
+
+    termiteBtn.addEventListener('click', function () {
+        contentTitle.innerText = 'Termite Title';
+        contentText.innerText = 'Termite Content Text';
+    });
+
 </script>
 
 </body>
