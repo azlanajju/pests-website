@@ -62,19 +62,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav me-auto " style="text-align: center; ">
-                    <a href="index.html" class="nav-item nav-link active" style="font-size: 25px;">Home</a>
-                    <a href="about.html" class="nav-item nav-link " style="font-size: 25px;">About</a>
-                    <a href="service.html" class="nav-item nav-link" style="font-size: 25px;">Services</a>
+                    <a href="index.html" class="nav-item nav-link active" style="font-size: 20px;">Home</a>
+                    <a href="about.html" class="nav-item nav-link " style="font-size: 20px;">About</a>
+                    <a href="service.html" class="nav-item nav-link" style="font-size: 20px;">Services</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="font-size: 25px;">Pest Guide</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="font-size: 20px;">Pest Guide</a>
                         <div class="dropdown-menu fade-up m-0">
-                            <a href="./pest_guide.html" class="dropdown-item" style="font-size: 25px;">Pest Guide</a>
-                            <a href="./where_we.html" class="dropdown-item" style="font-size: 25px;">Where we service</a>
-                            <a href="./termites.html" class="dropdown-item" style="font-size: 25px;">Termites</a>
-                            <a href="./residential.html" class="dropdown-item" style="font-size: 30px;">Residential</a>
+                            <a href="./pest_guide.html" class="dropdown-item" style="font-size: 17px;">Pest Guide</a>
+                            <a href="./where_we.html" class="dropdown-item" style="font-size: 17px;">Where we service</a>
+                            <a href="./termites.html" class="dropdown-item" style="font-size: 17px;">Termites</a>
+                            <a href="./residential.html" class="dropdown-item" style="font-size: 17px;">Residential</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link " style="font-size: 25px;">Contact us</a>
+                    <a href="contact.html" class="nav-item nav-link " style="font-size: 20px;">Contact us</a>
                 </div>
                 <div class="mt-4 mt-lg-0 me-lg-n4 py-3 px-4  d-flex align-items-center">
 
@@ -90,7 +90,7 @@
 
 
 <!-- Carousel Start -->
-<div class="container-fluid p-0 mb-5">
+<!-- <div class="container-fluid p-0 mb-5">
     <div class="owl-carousel header-carousel position-relative">
         <div class="owl-carousel-item new_caro position-relative">
             <img class="img-fluid" src="./images/carousal.jpeg" alt="">
@@ -120,6 +120,50 @@
             </div>
         </div>
     </div>
+</div> -->
+
+<style>
+    .buttons_change{
+        display: flex;
+    }
+    .buttons_change h5{
+        border: 2px solid white;
+        padding: 5px 10px ;
+        border-radius: 10px;
+        margin: 5px;
+    }
+</style>
+<!-- Your static content goes here -->
+<div class="container-fluid p-0 mb-5" >
+<img class="img-fluid" src="./images/carousal.jpeg" alt="">
+<div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-10 ">
+            <div class="buttons_change">
+                <h5 class="text-white text-uppercase mb-3" onclick="clickChange('1')">Residential</h5>
+            <h5 class="text-white text-uppercase mb-3" onclick="clickChange('2')">Rodent</h5>
+            <h5 class="text-white text-uppercase mb-3" onclick="clickChange('3')">Termite</h5>
+            </div>
+            
+            <br>
+            <br>
+
+            <h1 style="font-size: 30px;" class="display-3 text-white mb-4">For Fast, Effective Pest Control <br> In Dallas Fort Worth & Houston</h1>
+            <p class="fs-5 fw-medium text-white mb-4 pb-2" id="details_front">"For ongoing protection against common household pests, All-Safe Pest & Termite is the trusted choice for pest management! We have green and eco-friendly options available!"</p>
+            <div class="price-container text-center">
+                <br>
+                <br>
+                <p class="price-text text-white" style="font-size: 30px;">Plans starting as low as</p>
+                <p class="price-amount text-white display-4 mb-0" style="font-size: 30px !important;"> $34<span class="price-decimal">.</span><span class="price-cents" style="font-size: 20px;">99</span>
+                    <span class="price-month" style="font-size: 30px;">/mon</span>
+                </p>
+                <a href="" style="background: #aa1712; border-radius: 10px; border: 2px solid white;" class="btn btn-primary py-md-3 px-md-5">Book Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 </div>
 <!-- Carousel End -->
 
@@ -695,28 +739,16 @@
         });
     });
 
-    const contentTitle = document.getElementById('contentTitle');
-    const contentText = document.getElementById('contentText');
-
-    const residentialBtn = document.querySelector('.btn[data-content="residential"]');
-    const rodentBtn = document.querySelector('.btn[data-content="rodent"]');
-    const termiteBtn = document.querySelector('.btn[data-content="termite"]');
-
-    residentialBtn.addEventListener('click', function () {
-        contentTitle.innerText = 'Residential Title';
-        contentText.innerText = 'Residential Content Text';
-    });
-
-    rodentBtn.addEventListener('click', function () {
-        contentTitle.innerText = 'Rodent Title';
-        contentText.innerText = 'Rodent Content Text';
-    });
-
-    termiteBtn.addEventListener('click', function () {
-        contentTitle.innerText = 'Termite Title';
-        contentText.innerText = 'Termite Content Text';
-    });
-
+    var frontDetails = document.getElementById('details_front');
+    function clickChange(change){
+        if(change === "1"){
+            frontDetails.innerHTML = '"For ongoing protection against common household pests, All-Safe Pest & Termite is the trusted choice for pest management! We have green and eco-friendly options available!"';
+        } else if(change === "2"){
+            frontDetails.innerHTML = "rodent";
+        } else {
+            frontDetails.innerHTML = "termite";
+        }
+    }
 </script>
 </body>
 </html>
