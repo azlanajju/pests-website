@@ -90,81 +90,74 @@
 
 
 <!-- Carousel Start -->
-<!-- <div class="container-fluid p-0 mb-5">
-    <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item new_caro position-relative">
-            <img class="img-fluid" src="./images/carousal.jpeg" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <a href="#" class="btn btn-lg btn-danger text-uppercase mb-3 animated slideInDown active_caro" style="border: 2px solid white;" data-content="residential">Residential</a>
-                            <a href="#" class="btn btn-sm btn-danger text-uppercase mb-3 animated slideInDown caro_lilSmall" style="border: 2px solid white;" data-content="rodent">Rodent</a>
-                            <a href="#" class="btn btn-sm btn-danger text-uppercase mb-3 animated slideInDown caro_lilSmall" style="border: 2px solid white;" data-content="termite">Termite</a>
-                            <br>
-                            <br>
-                            <h1 id="contentTitle" style="font-size: 30px;" class="display-3 text-white animated slideInDown mb-4">For Fast, Effective Pest Control <br> In Dallas Fort Worth & Houston</h1>
-                            <p id="contentText" class="fs-5 fw-medium text-white mb-4 pb-2">"For ongoing protection against common household pests, All-Safe Pest & Termite is the trusted choice for pest management! We have green and eco-friendly options available!"</p>
-                            <div class="price-container text-center">
-                                <br>
-                                <br>
-                                <p class="price-text text-white" style="font-size: 30px;">Plans starting as low as</p>
-                                <p class="price-amount text-white display-4 mb-0" style="font-size: 30px !important;"> $34<span class="price-decimal">.</span><span class="price-cents" style="font-size: 20px;">99</span>
-                                    <span class="price-month" style="font-size: 30px;">/mon</span>
-                                </p>
-                                <a href="#" class="btn btn-primary py-md-3 px-md-5 animated slideInLeft" style="background: #aa1712; border-radius: 10px; border: 2px solid white;">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 
 <style>
-    .buttons_change{
+    .buttons_change {
         display: flex;
     }
-    .buttons_change h5{
+
+    .buttons_change h5 {
         border: 2px solid white;
-        padding: 5px 10px ;
+        padding: 5px 10px;
         border-radius: 10px;
         margin: 5px;
+        /* Set initial styles for the button */
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    /* Apply styles when the button is hovered over */
+    .buttons_change h5:hover {
+        background-color: red;
+        color: white;
+        border-color: white;
+    }
+
+    /* Apply styles to the active button */
+    .buttons_change h5.active {
+        background-color: red;
+        color: white;
+        border-color: white;
+    }
+
+    .imageOfCarousel {
+        width: 100vw;
     }
 </style>
-<!-- Your static content goes here -->
-<div class="container-fluid p-0 mb-5" >
-<img class="img-fluid" src="./images/carousal.jpeg" alt="">
-<div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
-<div class="container">
-    <div class="row justify-content-start">
-        <div class="col-10 ">
-            <div class="buttons_change">
-                <h5 class="text-white text-uppercase mb-3" onclick="clickChange('1')">Residential</h5>
-            <h5 class="text-white text-uppercase mb-3" onclick="clickChange('2')">Rodent</h5>
-            <h5 class="text-white text-uppercase mb-3" onclick="clickChange('3')">Termite</h5>
-            </div>
-            
-            <br>
-            <br>
 
-            <h1 style="font-size: 30px;" class="display-3 text-white mb-4">For Fast, Effective Pest Control <br> In Dallas Fort Worth & Houston</h1>
-            <p class="fs-5 fw-medium text-white mb-4 pb-2" id="details_front">"For ongoing protection against common household pests, All-Safe Pest & Termite is the trusted choice for pest management! We have green and eco-friendly options available!"</p>
-            <div class="price-container text-center">
-                <br>
-                <br>
-                <p class="price-text text-white" style="font-size: 30px;">Plans starting as low as</p>
-                <p class="price-amount text-white display-4 mb-0" style="font-size: 30px !important;"> $34<span class="price-decimal">.</span><span class="price-cents" style="font-size: 20px;">99</span>
-                    <span class="price-month" style="font-size: 30px;">/mon</span>
-                </p>
-                <a href="" style="background: #aa1712; border-radius: 10px; border: 2px solid white;" class="btn btn-primary py-md-3 px-md-5">Book Now</a>
+
+<!-- Your static content goes here -->
+<div class="container-fluid p-0 mb-5">
+    <img class="img-fluid imageOfCarousel" src="./images/carousal.jpeg" alt="">
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4); margin-top: 100px; height: 100vh; width: 100%;">
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-10 ">
+                    <div class="buttons_change">
+                        <h5 class="text-white text-uppercase mb-3 active" onclick="clickChange('1', this)">Residential</h5>
+                        <h5 class="text-white text-uppercase mb-3" onclick="clickChange('2', this)">Rodent</h5>
+                        <h5 class="text-white text-uppercase mb-3" onclick="clickChange('3', this)">Termite</h5>
+                    </div>
+                    <br>
+                    <br>
+
+                    <h1 id="main_heading" style="font-size: 30px;" class="display-3 text-white mb-4">For Fast, Effective Pest Control <br> In Dallas Fort Worth & Houston</h1>
+                    <p class="fs-5 fw-medium text-white mb-4 pb-2" id="details_front">"For ongoing protection against common household pests, All-Safe Pest & Termite is the trusted choice for pest management! We have green and eco-friendly options available!"</p>
+                    <div class="price-container text-center">
+                        <br>
+                        <br>
+                        <p class="price-text text-white" style="font-size: 30px;">Plans starting as low as</p>
+                        <p class="price-amount text-white display-4 mb-0" style="font-size: 30px !important;"> $34<span class="price-decimal">.</span><span class="price-cents" style="font-size: 20px;">99</span>
+                            <span class="price-month" style="font-size: 30px;">/mon</span>
+                        </p>
+                        <a href="" style="background: #aa1712; border-radius: 10px; border: 2px solid white;" class="btn btn-primary py-md-3 px-md-5">Book Now</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-</div>
-</div>
 <!-- Carousel End -->
 
 
@@ -173,91 +166,138 @@
 
 
 
-
-
-
-<!-- Carousel End -->
-        <!-- <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="./images/dskt2.jpg" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown ">Residential</h5>
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown active_caro">Rodent</h5>
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown ">Termite</h5>
-
-                            <h1 style="font-size: 30px;" class="display-3 text-white animated slideInDown mb-4">For Fast, Effective Pest Control In Dallas Fort Worth & Houston</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2" id="description_carousel">"For ongoing protection against common household pests, All-Safe Pest & Termite is the trusted choice for pest management! We have green and eco-friendly options available!"</p>
-                            <div class="price-container text-center">
-                                <p class="price-text text-white" style="font-size: 30px;">Plans starting as low as</p>
-                                <p class=" text-white display-4 " style="font-size: 30px !important;"> $34<span class="price-decimal">.</span><span class="price-cents" style="font-size: 20px;">99</span>
-                                    <span class="price-month"  style="font-size: 30px;">/mo</span>
-                                </p>
-                                <a href="" style="background: #aa1712;" class="btn btn-primary py-md-3 px-md-5 animated slideInLeft">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-        </div>-->
-        <!-- <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="./img/about-1.jpg" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .4);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown ">Residential</h5>
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Rodent</h5>
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown active_caro">Termite</h5>
-
-                            <h1 style="font-size: 30px;" class="display-3 text-white animated slideInDown mb-4">For Fast, Effective Pest Control In Dallas Fort Worth & Houston</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2" id="description_carousel">"For ongoing protection against common household pests, All-Safe Pest & Termite is the trusted choice for pest management! We have green and eco-friendly options available!"</p>
-                            <div class="price-container text-center">
-                                <p class="price-text text-white" style="font-size: 30px;">Plans starting as low as</p>
-                                <p class="price-amount text-white display-4 mb-0 "  style="font-size: 30px !important;"> $34<span class="price-decimal">.</span><span class="price-cents" style="font-size: 20px;">99</span>
-                                    <span class="price-month"  style="font-size: 30px;">/mon</span>
-                                </p>
-                                <a href="" style="background: #aa1712;" class="btn btn-primary py-md-3 px-md-5 animated slideInLeft">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
 <!-- add email -->
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .container1 {
+    margin-left: 10%;
+    width: 80vw;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    background: #f9f9f9; /* Light gray background color */
+    border-radius: 10px; /* Rounded corners for the container */
+    overflow: hidden; /* Hide overflowing content */
+  }
 
-<div class="quote-box">
-    <div class="esitmate">
-        <img src="./home pest and control logo long transparent.png" alt="">
-        <div class="est_details">
-            <h1>Get Your Free Esitmate</h1>
-            <p>Please write your email or message us through WhatsApp, and we will get in touch with you.</p>
-        </div>
+  .container2 {
+    width: 90vw;
+    background: #f2f2f2; /* Slightly darker gray background color */
+    margin: 20px;
+    display: flex; 
+    justify-content: space-between; 
+    border-radius: 8px; /* Rounded corners for the container */
+    overflow: hidden; /* Hide overflowing content */
+  }
+
+  .container2 > div {
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%; 
+    background-color: #f7f7f7; /* Light gray background color */
+    border-radius: 8px; /* Rounded corners for the inner containers */
+    overflow: hidden; /* Hide overflowing content */
+  }
+
+  /* Additional styling */
+  .sub1 {
+    text-align: center;
+  }
+
+  .sub1 h3 {
+    margin-bottom: 5px;
+    color: #333; /* Dark text color */
+  }
+
+  .sub1 h6 {
+    color: #666; /* Slightly darker text color */
+  }
+
+  .container2 .subContainer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .email-input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80%;
+    box-sizing: border-box;
+  }
+
+  .get-quote-button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 60%;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition on hover */
+
+  }
+
+  .get-quote-button:hover {
+      background-color: red; /* Red background on hover */
+      color: white; /* White text on hover */
+      border: 2px solid white; /* White border on hover */
+    }
+  .subContainer3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px; /* Add some padding to the left for a better appearance */
+  }
+
+  .call-text {
+    margin-bottom: 10px;
+    color: #333; /* Dark text color */
+  }
+
+  .icon {
+    font-size: 24px;
+    color: #333; /* Dark text color */
+  }
+</style>
+
+<div class="container1">
+  <div class="container2">
+    <div class="subContainer1">
+      <div class="sub1">
+        <h3>GET YOUR FREE ESTIMATE</h3>
+        <h6>Request your FREE no obligation estimate</h6>
+      </div>
     </div>
-    <div class="emailwhatsapp">
-        <div class="quote-form">
-            <div class="inputquote">
-                <input type="email" placeholder="Enter your email">
-            </div>
-          <button class="get-quote-btn">Get a Quote</button>
-        </div>
-        <br>
-        <br><br>
-        <div class="emailtext" style="color:transparent; margin-top: -0px;">
-        --OR--
+    <div class="subContainer2">
+      <input type="email" class="email-input" placeholder="Enter your email">
+      <button class="get-quote-button">GET A QUOTE</button>
     </div>
-    <br>
-        <div class="whatsapp-contact">
-          <a href="https://wa.me/whatsappphonenumber" target="_blank">
-            <img src="./images/WhatsApp-Logo.wine.svg" alt="WhatsApp Contact">
-          </a>
+    <div class="subContainer3">
+      <div class="call-text"> <h1>For faster service </h1> 
+        <div class="call-text1" style=" text-align: center; align-items: center; justify-content: center;">
+            <h6>       give us a call:</h6>
         </div>
+   </div>
+   <div class="icon">
+    <a href="tel:+1234567890"> <!-- Replace +1234567890 with the actual phone number you want to call -->
+        <i class="fa fa-phone" style="font-size:48px;color:red"></i>
+    </a>
+</div>      </div>
     </div>
+  </div>
 </div>
-      
-    
     
     <!-- add email -->
 
@@ -266,9 +306,15 @@
 
 <!-- green display -->
 <div class="cardd-container">
-    <div class="ccardd"> <img src="./images/main1.png" alt=""></div>
-    <div class="ccardd"> <img src="./images/main2.png" alt=""> </div>
-    <div class="ccardd"> <img src="./images/main3.png" alt=""> </div>
+    <div class="ccardd"> 
+        <img src="./images/main1.png" alt="">
+    </div>
+    <div class="ccardd"> 
+        <img src="./images/main2.png" alt=""> 
+    </div>
+    <div class="ccardd"> 
+        <img src="./images/main3.png" alt=""> 
+    </div>
   </div>
 <!-- green display --
 
@@ -740,15 +786,29 @@
     });
 
     var frontDetails = document.getElementById('details_front');
-    function clickChange(change){
-        if(change === "1"){
-            frontDetails.innerHTML = '"For ongoing protection against common household pests, All-Safe Pest & Termite is the trusted choice for pest management! We have green and eco-friendly options available!"';
-        } else if(change === "2"){
-            frontDetails.innerHTML = "rodent";
-        } else {
-            frontDetails.innerHTML = "termite";
-        }
-    }
+var heading = document.getElementById('main_heading');
+
+function clickChange(change, buttonElement) {
+  // Remove the "active" class from all buttons
+  var buttons = document.querySelectorAll('.buttons_change h5');
+  buttons.forEach(button => button.classList.remove('active'));
+
+  // Add the "active" class to the clicked button
+  buttonElement.classList.add('active');
+
+  if (change === "1") {
+    frontDetails.innerHTML = '"For ongoing protection against common household pests, All-Safe Pest & Termite is the trusted choice for pest management! We have green and eco-friendly options available!"';
+    heading.innerHTML = "FOR FAST, EFECTIVE PEST CONTROL <br> In Dallas Fort Worth & Houston";
+  } else if (change === "2") {
+    frontDetails.innerHTML = "Keep mice and rats out of your home or business with hassle-free rodent control and removal from All-Safe Pest & Termite, backed with a service guarantee!";
+    heading.innerHTML = "GET STARTED WITH <br> Professional Rodent Control";
+  } else {
+    frontDetails.innerHTML = "Offering the highest level of termite protection in the form of Termidor® treatments and the Sentricon® System, All-Safe is a local expert in termite control!";
+    heading.innerHTML = "PREVENT COSTLY TERMITE DAMAGE <br> With Homepests Termite Services";
+  }
+}
+
+    
 </script>
 </body>
 </html>
