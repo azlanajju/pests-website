@@ -15,13 +15,18 @@
     // Initiate the wowjs
     new WOW().init();
 
-
+var img_logo = document.getElementById('img_logo');
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 90) {
             $('.nav-bar').addClass('sticky-top shadow');
+            img_logo.style.width="200px"
+            img_logo.style.margin="0";
+            
         } else {
             $('.nav-bar').removeClass('sticky-top shadow');
+            img_logo.style.width="350px"
+            img_logo.style.marginTop="-45px";
         }
     });
     

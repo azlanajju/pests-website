@@ -399,10 +399,49 @@ object-fit: cover;
 
 
 @media (max-width:786px) {
+
+  .imageOfCarousel {
+    min-height: 100vh;
+    width: auto;
+    object-fit: cover;
+}
+
+.buttons_change {
+  display: flex;
+  margin-top: 50px;
+}
+
+.buttons_change h5 {
+  font-size: 15px;
+}
+.container1{
+  height: 100vh;
+  background: red;
+}
+
+
+.container2 {
+flex-direction: column;
+height: 100vh;
+background: red;
+
+}
+.get-quote-button{
+  max-width: 70%;
+}
+.container2 > div {
+  height: 33.3%;
+ }
+ .sub1{
+  font-size: 15px;
+}
+
+
 .esitmate img{
   height: 50px;
 
 }
+
 .quote-box{
   margin-top: 0;
 }
@@ -459,6 +498,9 @@ object-fit: cover;
   font-size: 25px;
 }
 .hide_in_phone{
+  display: none;
+}
+.img_logo{
   display: none;
 }
 }
